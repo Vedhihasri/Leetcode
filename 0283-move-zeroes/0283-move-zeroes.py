@@ -3,10 +3,15 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        l=0
-        for r in range(len(nums)):
-            if nums[r]!=0:
-                nums[l],nums[r]=nums[r],nums[l]
-                l+=1
-                
-        
+        a=len(nums)
+        c=0
+        ze=0
+        for i in nums:
+            if i!=0:
+                nums[c]=i
+                c+=1
+            else:
+                ze+=1
+        for i in range(c, len(nums)):
+            nums[i] = 0
+
